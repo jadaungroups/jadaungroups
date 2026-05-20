@@ -467,6 +467,85 @@ margin-bottom:10px;
 .counter-card p{
 font-size:18px;
   }
+    .contact-section{
+padding:60px 20px;
+text-align:center;
+background:#fff8f0;
+}
+
+.contact-section h2{
+font-size:2.2rem;
+color:#8b0000;
+margin-bottom:15px;
+}
+
+.contact-text{
+max-width:600px;
+margin:auto;
+font-size:1rem;
+color:#555;
+line-height:1.7;
+margin-bottom:35px;
+}
+
+.contact-box{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-bottom:35px;
+}
+
+.contact-card{
+background:white;
+padding:25px;
+width:250px;
+border-radius:18px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.contact-card:hover{
+transform:translateY(-6px);
+}
+
+.contact-card h3{
+color:#b71c1c;
+margin-bottom:10px;
+}
+
+.contact-card p{
+color:#555;
+font-size:1rem;
+}
+
+.contact-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.insta{
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+
+@media(max-width:768px){
+
+.contact-card{
+width:100%;
+max-width:320px;
+}
+
+.contact-section h2{
+font-size:1.8rem;
+}
+
+}
   </style>
 </head>
 
@@ -669,16 +748,50 @@ Available Packaging:
 </div>
 
   </section>
-  <h2>Contact Us</h2>
+  <section id="contact" class="contact-section">
 
-  <p>Email: foods@jadaungroups.com</p>
+<h2>Contact Us</h2>
 
-  <p>Website: jadaungroups.com</p>
+<p class="contact-text">
+We would love to hear from you for retail, wholesale and bulk spice orders.
+</p>
 
-  <p>WhatsApp: +91 9351222099</p>
+<div class="contact-box">
 
-  <br><br>
+<div class="contact-card">
+<h3>📞 Call Us</h3>
+<p>+91 919351222099</p>
+</div>
 
+<div class="contact-card">
+<h3>📧 Email</h3>
+<p>foods@jadaungroups.com</p>
+</div>
+
+<div class="contact-card">
+<h3>📍 Location</h3>
+<p>Rajasthan, India</p>
+</div>
+
+</div>
+
+<div class="contact-buttons">
+
+<a href="tel:+919351222099" class="btn">
+📞 Call Now
+</a>
+
+<a href="https://wa.me/919351222099" class="btn whatsapp">
+💬 WhatsApp
+</a>
+
+<a href="https://instagram.com/rajput_spices" class="btn insta">
+📷 Instagram
+</a>
+
+</div>
+
+</section>
 <h2>Our Factory Location</h2>
 
 <iframe
