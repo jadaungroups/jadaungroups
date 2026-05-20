@@ -317,6 +317,68 @@ display:block;
 margin:8px auto 0;
 border-radius:10px;
 }
+    .section-title{
+font-size:36px;
+text-align:center;
+margin-bottom:40px;
+color:#b71c1c;
+font-weight:bold;
+}
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:20px;
+}
+
+.card{
+background:white;
+width:300px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.product-img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+font-size:24px;
+padding:15px 15px 5px;
+color:#b71c1c;
+}
+
+.card p{
+padding:0 15px 15px;
+font-size:15px;
+line-height:1.6;
+}
+
+.packaging{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+padding:15px;
+}
+
+.packaging span{
+background:linear-gradient(45deg,#ff9800,#ff5722);
+color:white;
+padding:8px 14px;
+border-radius:30px;
+font-size:14px;
+font-weight:bold;
+}
   </style>
 </head>
 
@@ -389,57 +451,65 @@ At Jadaun Groups, our mission is simple — to provide pure and healthy spices t
   </p>
 
 </section>
-
 <section id="products">
 
-  <div class="products">
+<h2 class="section-title">Our Products</h2>
+
+<div class="products">
 
 <div class="card">
+<img src="chilli.jpg" class="product-img">
 
 <h3>Red Chilli Powder</h3>
 
 <p>
-Premium quality lal mirch powder with rich colour and authentic taste.
+Premium quality lal mirch powder with rich colour and strong taste.
 </p>
 
-<p>
-<strong>Packaging:</strong><br>
-100gm | 250gm | 500gm | 1kg
-</p>
-
+<div class="packaging">
+<span>100g</span>
+<span>200g</span>
+<span>500g</span>
+<span>1kg</span>
+</div>
 </div>
 
 <div class="card">
+<img src="haldi.jpg" class="product-img">
 
 <h3>Turmeric Powder</h3>
 
 <p>
-Pure and hygienic haldi powder with natural aroma and freshness.
+Pure turmeric made from selected quality haldi.
 </p>
 
-<p>
-<strong>Packaging:</strong><br>
-100gm | 250gm | 500gm | 1kg
-</p>
-
+<div class="packaging">
+<span>100g</span>
+<span>200g</span>
+<span>500g</span>
+<span>1kg</span>
+</div>
 </div>
 
 <div class="card">
+<img src="dhania.jpg" class="product-img">
 
 <h3>Coriander Powder</h3>
 
 <p>
-Fresh dhaniya powder made from selected premium coriander seeds.
+Fresh and aromatic dhania powder for authentic Indian taste.
 </p>
 
-<p>
-<strong>Packaging:</strong><br>
-100gm | 250gm | 500gm | 1kg
-</p>
+<div class="packaging">
+<span>100g</span>
+<span>200g</span>
+<span>500g</span>
+<span>1kg</span>
+</div>
+</div>
 
 </div>
 
-  </div>
 </section>
 
 <section id="wholesale">
