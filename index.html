@@ -436,6 +436,37 @@ font-size:38px;
 color:#b71c1c;
 margin-bottom:30px;
 }
+    #counter{
+padding:70px 20px;
+background:linear-gradient(90deg,#b71c1c,#e53935);
+color:white;
+}
+
+.counter-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.counter-card{
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:20px;
+width:220px;
+backdrop-filter:blur(5px);
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.counter-card h2{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.counter-card p{
+font-size:18px;
+  }
   </style>
 </head>
 
@@ -611,6 +642,33 @@ Available Packaging:
 </div>
 
 </section>
+  <section id="counter">
+
+<div class="counter-box">
+
+<div class="counter-card">
+<h2 class="count">5000+</h2>
+<p>Happy Customers</p>
+</div>
+
+<div class="counter-card">
+<h2 class="count">50+</h2>
+<p>Premium Products</p>
+</div>
+
+<div class="counter-card">
+<h2 class="count">10+</h2>
+<p>States Supply</p>
+</div>
+
+<div class="counter-card">
+<h2 class="count">100%</h2>
+<p>Pure Spices</p>
+</div>
+
+</div>
+
+  </section>
   <h2>Contact Us</h2>
 
   <p>Email: foods@jadaungroups.com</p>
@@ -646,5 +704,42 @@ loading="lazy">
 class="call-float">
 📞 Call Us
 </a>
+  <script>
+
+const counters=document.querySelectorAll('.count');
+
+counters.forEach(counter=>{
+
+const updateCounter=()=>{
+
+const target=+counter.innerText.replace('+','').replace('%','');
+
+const count=+counter.getAttribute('data-count') || 0;
+
+const increment=target/100;
+
+if(count<target){
+
+counter.setAttribute('data-count',Math.ceil(count+increment));
+
+counter.innerText=Math.ceil(count+increment)+
+(counter.innerText.includes('%') ? '%' : '+');
+
+setTimeout(updateCounter,30);
+
+}else{
+
+counter.innerText=
+target+(counter.innerText.includes('%') ? '%' : '+');
+
+}
+
+};
+
+updateCounter();
+
+});
+
+  </script>
 </body>
 </html>
