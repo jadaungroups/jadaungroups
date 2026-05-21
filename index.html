@@ -48,25 +48,38 @@ font-size:17px;
 font-weight:600;
 letter-spacing:0.5px;
 position:relative;
-transition:0.3s;
+transition:0.4s;
+padding:8px 0;
 }
 
-/* HOVER EFFECT */
+/* GOLD UNDERLINE */
 
 nav a::after{
 content:'';
 position:absolute;
 left:0;
-bottom:-6px;
+bottom:-5px;
 width:0%;
 height:2px;
 background:#ffd54f;
 transition:0.4s;
+box-shadow:0 0 10px #ffd54f;
 }
+
+/* PREMIUM HOVER */
 
 nav a:hover{
 color:#ffd54f;
+
+text-shadow:
+0 0 8px rgba(255,213,79,0.9),
+0 0 18px rgba(255,213,79,0.7),
+0 0 28px rgba(255,213,79,0.5);
+
+transform:translateY(-2px);
 }
+
+/* ACTIVE UNDERLINE */
 
 nav a:hover::after{
 width:100%;
