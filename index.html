@@ -25,20 +25,7 @@ padding:40px 15px;
       padding:40px 20px;
     }
 
-    nav{
-background:linear-gradient(90deg,#b71c1c,#e53935);
-padding:15px 10px;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-gap:12px;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
-      backdrop-filter: blur(10px);
-}
+    
 
 
 
@@ -46,60 +33,7 @@ box-shadow:0 4px 12px rgba(0,0,0,0.2);
 .slides img{
 height:250px;
 }
-nav{
-gap:8px;
-padding:12px 6px;
-}
 
-nav a{
-font-size:14px;
-padding:8px 12px;
-}
-nav a{
-color:white;
-text-decoration:none;
-margin:0 18px;
-font-size:17px;
-font-weight:600;
-letter-spacing:0.5px;
-position:relative;
-transition:0.4s;
-padding:8px 0;
-}
-
-/* GOLD UNDERLINE */
-
-nav a::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-5px;
-width:0%;
-height:2px;
-background:#ffd54f;
-transition:0.4s;
-box-shadow:0 0 10px #ffd54f;
-}
-
-/* PREMIUM HOVER */
-
-nav a:hover{
-color:#ffd54f;
-
-text-shadow:
-0 0 8px rgba(255,213,79,0.9),
-0 0 18px rgba(255,213,79,0.7),
-0 0 28px rgba(255,213,79,0.5);
-
-transform:translateY(-2px);
-}
-
-/* ACTIVE UNDERLINE */
-
-nav a:hover::after{
-width:100%;
-}
-}
 
     .hero{
       padding:60px 20px;
@@ -256,15 +190,6 @@ width:90%;
 padding:10px;
 }
 
-nav{
-gap:8px;
-padding:12px 6px;
-}
-
-nav a{
-font-size:14px;
-padding:8px 12px;
-}
 
 .logo{
 width:90px;
@@ -734,16 +659,13 @@ transition:0.4s;
 .card:hover .product-img{
 transform:scale(1.08);
 }
-  nav{
-backdrop-filter:blur(10px);
-background:rgba(255,255,255,0.85);
-  }
+
 
   .hero{
 background:linear-gradient(-45deg,#b71c1c,#ff9800,#c62828,#ff5722);
 background-size:400% 400%;
 animation:gradient 8s ease infinite;
-}
+  }
 
 @keyframes gradient{
 
