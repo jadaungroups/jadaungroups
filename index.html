@@ -1266,7 +1266,244 @@ padding:14px 24px;
 
   }
 
+/* =========================
+ASSOCIATION SECTION
+========================= */
 
+.association-section{
+padding:100px 20px;
+background:
+linear-gradient(
+135deg,
+#fff5e8,
+#fff,
+#fff3e0
+);
+position:relative;
+overflow:hidden;
+}
+
+.association-section::before{
+content:'';
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(183,28,28,0.05);
+border-radius:50%;
+top:-200px;
+left:-200px;
+filter:blur(50px);
+}
+
+.association-section::after{
+content:'';
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(255,193,7,0.12);
+border-radius:50%;
+bottom:-150px;
+right:-150px;
+filter:blur(40px);
+}
+
+/* HEADING */
+
+.association-heading{
+text-align:center;
+max-width:850px;
+margin:auto;
+margin-bottom:70px;
+position:relative;
+z-index:2;
+}
+
+.association-heading span{
+display:inline-block;
+padding:10px 20px;
+background:#b71c1c;
+color:white;
+border-radius:50px;
+font-size:14px;
+font-weight:700;
+letter-spacing:2px;
+margin-bottom:20px;
+box-shadow:0 6px 20px rgba(183,28,28,0.3);
+}
+
+.association-heading h2{
+font-size:52px;
+font-weight:800;
+color:#b71c1c;
+margin-bottom:20px;
+line-height:1.2;
+text-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.association-heading p{
+font-size:19px;
+line-height:1.9;
+color:#555;
+}
+
+/* GRID */
+
+.association-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+max-width:1300px;
+margin:auto;
+position:relative;
+z-index:2;
+}
+
+/* CARD */
+
+.association-card{
+background:white;
+border-radius:30px;
+overflow:hidden;
+position:relative;
+transition:0.5s;
+box-shadow:
+0 15px 40px rgba(0,0,0,0.08);
+border:1px solid rgba(255,255,255,0.4);
+}
+
+.association-card:hover{
+transform:
+translateY(-15px)
+scale(1.02);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+
+.association-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:0.6s;
+}
+
+.association-card:hover img{
+transform:scale(1.08);
+}
+
+/* BADGE */
+
+.association-badge{
+position:absolute;
+top:18px;
+right:18px;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+padding:10px 16px;
+border-radius:50px;
+font-size:18px;
+font-weight:700;
+color:#ff9800;
+box-shadow:0 8px 25px rgba(0,0,0,0.12);
+z-index:5;
+animation:floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-6px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+/* CONTENT */
+
+.association-content{
+padding:30px;
+}
+
+.association-content h3{
+font-size:28px;
+font-weight:800;
+color:#b71c1c;
+margin-bottom:18px;
+line-height:1.3;
+}
+
+.association-content p{
+font-size:17px;
+line-height:1.9;
+color:#555;
+margin-bottom:25px;
+}
+
+/* TAGS */
+
+.association-tags{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.association-tags span{
+padding:10px 18px;
+background:
+linear-gradient(
+135deg,
+#b71c1c,
+#d32f2f
+);
+color:white;
+border-radius:50px;
+font-size:14px;
+font-weight:700;
+letter-spacing:0.5px;
+box-shadow:
+0 6px 18px rgba(183,28,28,0.25);
+transition:0.3s;
+}
+
+.association-tags span:hover{
+transform:scale(1.08);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.association-section{
+padding:70px 15px;
+}
+
+.association-heading h2{
+font-size:34px;
+}
+
+.association-heading p{
+font-size:16px;
+}
+
+.association-card img{
+height:220px;
+}
+
+.association-content{
+padding:24px;
+}
+
+.association-content h3{
+font-size:23px;
+}
+
+  }
 
 
 
@@ -1683,7 +1920,110 @@ allowfullscreen=""
 loading="lazy">
 </iframe>
 </section>
+<section class="association-section">
 
+<div class="association-heading">
+<span>TRUST • QUALITY • REPUTATION</span>
+<h2>Trusted By Leading Associations</h2>
+<p>
+Recognized by halwai associations, mandi traders and food businesses
+for premium quality spices and trusted wholesale supply.
+</p>
+</div>
+
+<div class="association-grid">
+
+<div class="association-card">
+<div class="association-badge">
+★★★★★
+</div>
+
+<img src="rajasthan-halwai.jpg" alt="">
+
+<div class="association-content">
+<h3>Rajasthan Halwai Association</h3>
+
+<p>
+Trusted for premium spice quality, strong aroma,
+natural colour and hygienic processing standards.
+</p>
+
+<div class="association-tags">
+<span>Premium Quality</span>
+<span>Wholesale Supply</span>
+</div>
+</div>
+</div>
+
+<div class="association-card">
+<div class="association-badge">
+★★★★★
+</div>
+
+<img src="udaipur-halwai.jpg" alt="">
+
+<div class="association-content">
+<h3>Udaipur Halwai Association</h3>
+
+<p>
+Preferred by sweet shops, restaurants and catering
+businesses across Rajasthan.
+</p>
+
+<div class="association-tags">
+<span>Pure Masalas</span>
+<span>Trusted Brand</span>
+</div>
+</div>
+</div>
+
+<div class="association-card">
+<div class="association-badge">
+★★★★★
+</div>
+
+<img src="dungarpur-halwai.jpg" alt="">
+
+<div class="association-content">
+<h3>Dungarpur Food Community</h3>
+
+<p>
+Recognized for authentic Indian spices with
+consistent bulk supply and premium taste.
+</p>
+
+<div class="association-tags">
+<span>Fresh Stock</span>
+<span>Bulk Orders</span>
+</div>
+</div>
+</div>
+
+<div class="association-card">
+<div class="association-badge">
+★★★★★
+</div>
+
+<img src="udaipur-mandi.jpg" alt="">
+
+<div class="association-content">
+<h3>Udaipur Mandi Traders</h3>
+
+<p>
+Trusted supplier for wholesale masala distribution
+and long term business relationships.
+</p>
+
+<div class="association-tags">
+<span>Fast Delivery</span>
+<span>Wholesale Rates</span>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
 <div class="google-review-box">
 
 <h3>
