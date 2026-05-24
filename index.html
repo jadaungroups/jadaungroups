@@ -1505,7 +1505,493 @@ font-size:23px;
 
   }
 
+/* =========================
+PREMIUM WHY SECTION
+========================= */
 
+.premium-why-section{
+
+position:relative;
+
+padding:140px 25px;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+#160404 0%,
+#2a0909 35%,
+#140404 100%
+);
+
+}
+
+
+/* PARTICLES */
+
+.premium-particles{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+z-index:0;
+}
+
+.premium-particles span{
+
+position:absolute;
+
+bottom:-120px;
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+background:
+linear-gradient(
+45deg,
+#ffb300,
+#ff5722
+);
+
+box-shadow:
+0 0 20px rgba(255,140,0,0.9);
+
+animation:
+particleMove 18s linear infinite;
+}
+
+
+/* RANDOM POSITIONS */
+
+.premium-particles span:nth-child(1){
+left:5%;
+animation-delay:0s;
+}
+
+.premium-particles span:nth-child(2){
+left:15%;
+animation-delay:2s;
+}
+
+.premium-particles span:nth-child(3){
+left:28%;
+animation-delay:4s;
+}
+
+.premium-particles span:nth-child(4){
+left:40%;
+animation-delay:1s;
+}
+
+.premium-particles span:nth-child(5){
+left:55%;
+animation-delay:6s;
+}
+
+.premium-particles span:nth-child(6){
+left:68%;
+animation-delay:3s;
+}
+
+.premium-particles span:nth-child(7){
+left:78%;
+animation-delay:7s;
+}
+
+.premium-particles span:nth-child(8){
+left:88%;
+animation-delay:5s;
+}
+
+.premium-particles span:nth-child(9){
+left:95%;
+animation-delay:8s;
+}
+
+.premium-particles span:nth-child(10){
+left:50%;
+animation-delay:9s;
+}
+
+@keyframes particleMove{
+
+0%{
+
+transform:
+translateY(0)
+scale(0.5);
+
+opacity:0;
+}
+
+20%{
+
+opacity:1;
+}
+
+100%{
+
+transform:
+translateY(-1200px)
+scale(1.8);
+
+opacity:0;
+}
+
+}
+
+
+/* GLOW EFFECT */
+
+.premium-glow,
+.premium-glow2{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+z-index:0;
+}
+
+.premium-glow{
+
+width:420px;
+height:420px;
+
+background:
+rgba(255,120,0,0.20);
+
+top:-150px;
+left:-120px;
+
+animation:
+glowMove 8s infinite alternate ease-in-out;
+}
+
+.premium-glow2{
+
+width:380px;
+height:380px;
+
+background:
+rgba(255,0,80,0.15);
+
+bottom:-100px;
+right:-100px;
+
+animation:
+glowMove2 10s infinite alternate ease-in-out;
+}
+
+@keyframes glowMove{
+
+100%{
+
+transform:
+translateX(80px)
+translateY(30px);
+}
+
+}
+
+@keyframes glowMove2{
+
+100%{
+
+transform:
+translateX(-60px)
+translateY(-40px);
+}
+
+}
+
+
+/* HEADING */
+
+.premium-heading{
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+max-width:1000px;
+
+margin:auto auto 90px;
+}
+
+.premium-heading h5{
+
+display:inline-block;
+
+padding:12px 28px;
+
+border-radius:50px;
+
+background:
+rgba(255,255,255,0.08);
+
+border:
+1px solid rgba(255,180,0,0.25);
+
+color:#ffcc80;
+
+font-size:14px;
+
+letter-spacing:3px;
+
+margin-bottom:30px;
+}
+
+.premium-heading h2{
+
+font-size:72px;
+
+line-height:1.1;
+
+font-weight:900;
+
+margin-bottom:30px;
+
+background:
+linear-gradient(
+90deg,
+#ffffff,
+#ffb300
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 10px 40px rgba(255,180,0,0.18);
+}
+
+.premium-heading p{
+
+font-size:22px;
+
+line-height:1.9;
+
+color:#f5f5f5;
+}
+
+.premium-heading span{
+
+color:#ffb300;
+
+font-weight:800;
+}
+
+.premium-heading b{
+
+color:#ffffff;
+}
+
+
+/* GRID */
+
+.premium-grid{
+
+position:relative;
+
+z-index:2;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+}
+
+
+/* CARD */
+
+.premium-card{
+
+position:relative;
+
+padding:40px 35px;
+
+border-radius:32px;
+
+background:
+rgba(255,255,255,0.07);
+
+border:
+1px solid rgba(255,255,255,0.10);
+
+backdrop-filter:blur(18px);
+
+overflow:hidden;
+
+transition:0.45s ease;
+
+box-shadow:
+0 10px 40px rgba(0,0,0,0.35);
+}
+
+
+/* SHINE EFFECT */
+
+.premium-card::before{
+
+content:'';
+
+position:absolute;
+
+top:-100%;
+left:-100%;
+
+width:220%;
+height:220%;
+
+background:
+linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.18),
+transparent
+);
+
+transform:rotate(25deg);
+
+transition:0.8s;
+}
+
+.premium-card:hover::before{
+
+top:100%;
+left:100%;
+}
+
+
+/* HOVER */
+
+.premium-card:hover{
+
+transform:
+translateY(-14px)
+scale(1.03);
+
+border:
+1px solid rgba(255,180,0,0.30);
+
+box-shadow:
+0 30px 70px rgba(255,120,0,0.25);
+}
+
+
+/* ICON */
+
+.premium-icon{
+
+width:85px;
+height:85px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin-bottom:28px;
+
+font-size:36px;
+
+border-radius:24px;
+
+background:
+linear-gradient(
+135deg,
+#ff9800,
+#ff0058
+);
+
+box-shadow:
+0 12px 35px rgba(255,80,0,0.35);
+
+animation:
+iconFloat 4s ease-in-out infinite;
+}
+
+@keyframes iconFloat{
+
+50%{
+
+transform:
+translateY(-10px);
+}
+
+}
+
+
+/* TEXT */
+
+.premium-card h3{
+
+font-size:30px;
+
+font-weight:800;
+
+margin-bottom:18px;
+
+color:#ffffff;
+}
+
+.premium-card p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#f2f2f2;
+}
+
+.premium-card b{
+
+color:#ffcc80;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.premium-heading h2{
+
+font-size:42px;
+}
+
+.premium-heading p{
+
+font-size:17px;
+}
+
+.premium-card{
+
+padding:32px 25px;
+}
+
+.premium-card h3{
+
+font-size:24px;
+}
+
+.premium-card p{
+
+font-size:16px;
+}
+
+  }
 
   
   
@@ -1905,7 +2391,179 @@ We would love to hear from you for retail, wholesale and bulk spice orders.
 </div>
 
 
+<!-- =========================
+WHY TO CHOOSE US
+========================= -->
 
+<section class="premium-why-section">
+
+<!-- PARTICLES -->
+
+<div class="premium-particles">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<!-- GLOW -->
+
+<div class="premium-glow"></div>
+<div class="premium-glow2"></div>
+
+<!-- HEADING -->
+
+<div class="premium-heading">
+
+<h5>
+WHY TO CHOOSE US?
+</h5>
+
+<h2>
+Trusted By Rajasthan's
+Food Industry
+</h2>
+
+<p>
+Premium quality spices manufactured by
+<b>Jadaun Masala Udhyog</b>
+under
+<span>Rajput Spices</span>
+and
+<span>Rajbhog Spices</span>.
+Trusted by wholesalers, retailers, halwai associations and food businesses across Rajasthan.
+</p>
+
+</div>
+
+<!-- GRID -->
+
+<div class="premium-grid">
+
+<!-- CARD -->
+
+<div class="premium-card">
+
+<div class="premium-icon">
+🌶️
+</div>
+
+<h3>
+Premium Spice Quality
+</h3>
+
+<p>
+<b>Rajput Spices</b>
+delivers rich aroma, strong colour and premium quality turmeric, chilli and coriander powder with hygienic processing.
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="premium-card">
+
+<div class="premium-icon">
+🏆
+</div>
+
+<h3>
+Trusted Rajbhog Spices
+</h3>
+
+<p>
+<b>Rajbhog Spices</b>
+is trusted by retailers, restaurants and wholesalers for authentic Indian flavour and freshness.
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="premium-card">
+
+<div class="premium-icon">
+🧪
+</div>
+
+<h3>
+Lab Tested Purity
+</h3>
+
+<p>
+Premium spices manufactured by
+<b>Jadaun Masala Udhyog</b>
+with quality assurance and hygienic production standards.
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="premium-card">
+
+<div class="premium-icon">
+🚚
+</div>
+
+<h3>
+Bulk Supply Network
+</h3>
+
+<p>
+Reliable wholesale spice supply across Rajasthan for mandis, distributors, hotels and food businesses.
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="premium-card">
+
+<div class="premium-icon">
+⭐
+</div>
+
+<h3>
+Recognized Spice Brands
+</h3>
+
+<p>
+<b>Rajput Spices</b>
+and
+<b>Rajbhog Spices</b>
+are becoming trusted spice brands across Rajasthan's food industry.
+</p>
+
+</div>
+
+<!-- CARD -->
+
+<div class="premium-card">
+
+<div class="premium-icon">
+✨
+</div>
+
+<h3>
+Authentic Indian Taste
+</h3>
+
+<p>
+Strong aroma, natural colour and authentic Indian flavour loved by halwais, retailers and food businesses.
+</p>
+
+</div>
+
+</div>
+
+</section>
 
 
 
