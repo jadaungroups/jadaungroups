@@ -1808,166 +1808,77 @@ font-size:24px;
 
      }
   
-/* =========================
-PREMIUM EFFECTS SAFE ADD
-========================= */
+<section class="elite-section">
 
-/* MOVING BACKGROUND */
+<div class="elite-heading">
 
-.luxury-why-section{
+<span>WHY TO CHOOSE US?</span>
 
-background-size:400% 400%;
+<h2>
+Trusted By Rajasthan's
+Food Industry
+</h2>
 
-animation:bgMove 12s ease infinite;
-}
+<p>
+Premium quality spices manufactured by Jadaun Masala Udhyog
+under Rajput Spices and Rajbhog Spices.
+</p>
 
-@keyframes bgMove{
+</div>
 
-0%{
-background-position:0% 50%;
-}
+<div class="elite-grid">
 
-50%{
-background-position:100% 50%;
-}
+<div class="elite-card">
+<div class="elite-icon">🌶️</div>
+<h3>Premium Spice Quality</h3>
+<p>
+Jadaun Masala Udhyog delivers premium quality spices with rich aroma, natural colour and trusted wholesale supply across Rajasthan.
+</p>
+</div>
 
-100%{
-background-position:0% 50%;
-}
+<div class="elite-card">
+<div class="elite-icon">🏆</div>
+<h3>Trusted Rajput Spices</h3>
+<p>
+Rajput Spices is trusted for turmeric, chilli and coriander powder with hygienic processing and premium quality standards.
+</p>
+</div>
 
-}
+<div class="elite-card">
+<div class="elite-icon">✨</div>
+<h3>Authentic Rajbhog Spices</h3>
+<p>
+Rajbhog Spices offers authentic Indian masalas trusted by halwai associations and food businesses.
+</p>
+</div>
 
-/* PREMIUM CARD EFFECT */
+<div class="elite-card">
+<div class="elite-icon">🧪</div>
+<h3>Lab Tested Purity</h3>
+<p>
+Fresh and hygienically processed spices manufactured with focus on purity and consistency.
+</p>
+</div>
 
-.luxury-card{
+<div class="elite-card">
+<div class="elite-icon">🚚</div>
+<h3>Wholesale Supply</h3>
+<p>
+Trusted bulk spice supplier for wholesalers, hotels, mandis and distributors across Rajasthan.
+</p>
+</div>
 
-cursor:pointer;
+<div class="elite-card">
+<div class="elite-icon">🤝</div>
+<h3>Trusted Business Network</h3>
+<p>
+Recognized by traders, halwai associations and retailers for premium Indian spice quality.
+</p>
+</div>
 
-transform-style:preserve-3d;
+</div>
 
-transition:0.5s;
-}
-
-/* HOVER EFFECT */
-
-.luxury-card:hover{
-
-transform:
-translateY(-15px)
-scale(1.03);
-
-box-shadow:
-0 25px 60px rgba(255,193,7,0.22);
-}
-
-/* GOLD LIGHT */
-
-.luxury-card::after{
-
-content:'';
-
-position:absolute;
-
-top:-120px;
-right:-120px;
-
-width:250px;
-height:250px;
-
-background:
-radial-gradient(
-circle,
-rgba(255,215,0,0.18),
-transparent 70%
-);
-
-transition:0.6s;
-
-pointer-events:none;
-}
-
-.luxury-card:hover::after{
-
-transform:
-scale(1.4);
-
-opacity:1;
-}
-
-/* TITLE GLOW */
-
-.luxury-heading h2{
-
-text-shadow:
-0 0 25px rgba(255,215,0,0.25);
-}
-
-/* ICON EFFECT */
-
-.luxury-icon{
-
-position:relative;
-
-overflow:hidden;
-}
-
-/* SHINE EFFECT */
-
-.luxury-icon::after{
-
-content:'';
-
-position:absolute;
-
-top:-50px;
-left:-80px;
-
-width:220%;
-height:220%;
-
-background:
-linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.45),
-transparent
-);
-
-transform:rotate(25deg);
-
-animation:shineMove 3s linear infinite;
-}
-
-@keyframes shineMove{
-
-0%{
-left:-120%;
-}
-
-100%{
-left:120%;
-}
-
-}
-
-/* DESKTOP MODE */
-
-@media(min-width:1200px){
-
-.luxury-grid{
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:45px;
-}
-
-.luxury-card{
-
-min-height:420px;
-}
-
-  }
+</section>
 
 
 
