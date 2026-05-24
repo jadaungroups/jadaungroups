@@ -1807,78 +1807,351 @@ font-size:24px;
 }
 
      }
-  
-<section class="elite-section">
 
-<div class="elite-heading">
+  /* =========================
+ELITE SECTION
+========================= */
 
-<span>WHY TO CHOOSE US?</span>
+.elite-section{
 
-<h2>
-Trusted By Rajasthan's
-Food Industry
-</h2>
+padding:120px 20px;
 
-<p>
-Premium quality spices manufactured by Jadaun Masala Udhyog
-under Rajput Spices and Rajbhog Spices.
-</p>
+background:
+linear-gradient(
+135deg,
+#120909,
+#1a1111,
+#241616
+);
 
-</div>
+position:relative;
 
-<div class="elite-grid">
+overflow:hidden;
+}
 
-<div class="elite-card">
-<div class="elite-icon">🌶️</div>
-<h3>Premium Spice Quality</h3>
-<p>
-Jadaun Masala Udhyog delivers premium quality spices with rich aroma, natural colour and trusted wholesale supply across Rajasthan.
-</p>
-</div>
+/* GOLD GLOW */
 
-<div class="elite-card">
-<div class="elite-icon">🏆</div>
-<h3>Trusted Rajput Spices</h3>
-<p>
-Rajput Spices is trusted for turmeric, chilli and coriander powder with hygienic processing and premium quality standards.
-</p>
-</div>
+.elite-section::before{
 
-<div class="elite-card">
-<div class="elite-icon">✨</div>
-<h3>Authentic Rajbhog Spices</h3>
-<p>
-Rajbhog Spices offers authentic Indian masalas trusted by halwai associations and food businesses.
-</p>
-</div>
+content:'';
 
-<div class="elite-card">
-<div class="elite-icon">🧪</div>
-<h3>Lab Tested Purity</h3>
-<p>
-Fresh and hygienically processed spices manufactured with focus on purity and consistency.
-</p>
-</div>
+position:absolute;
 
-<div class="elite-card">
-<div class="elite-icon">🚚</div>
-<h3>Wholesale Supply</h3>
-<p>
-Trusted bulk spice supplier for wholesalers, hotels, mandis and distributors across Rajasthan.
-</p>
-</div>
+width:600px;
+height:600px;
 
-<div class="elite-card">
-<div class="elite-icon">🤝</div>
-<h3>Trusted Business Network</h3>
-<p>
-Recognized by traders, halwai associations and retailers for premium Indian spice quality.
-</p>
-</div>
+background:
+radial-gradient(
+circle,
+rgba(255,193,7,0.12),
+transparent 70%
+);
 
-</div>
+top:-250px;
+right:-200px;
 
-</section>
+filter:blur(20px);
+}
+
+/* HEADING */
+
+.elite-heading{
+
+text-align:center;
+
+max-width:900px;
+
+margin:auto;
+
+margin-bottom:80px;
+
+position:relative;
+z-index:2;
+}
+
+/* TAG */
+
+.elite-heading span{
+
+display:inline-block;
+
+padding:12px 26px;
+
+border-radius:50px;
+
+background:
+rgba(255,193,7,0.12);
+
+border:
+1px solid rgba(255,193,7,0.25);
+
+color:#ffd54f;
+
+font-size:14px;
+font-weight:700;
+
+letter-spacing:2px;
+
+margin-bottom:25px;
+}
+
+/* TITLE */
+
+.elite-heading h2{
+
+font-size:68px;
+
+font-weight:900;
+
+line-height:1.1;
+
+margin-bottom:25px;
+
+background:
+linear-gradient(
+90deg,
+#ffffff,
+#ffd54f
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 0 25px rgba(255,193,7,0.2);
+}
+
+/* TEXT */
+
+.elite-heading p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#d0d0d0;
+}
+
+/* GRID */
+
+.elite-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+max-width:1450px;
+
+margin:auto;
+
+position:relative;
+z-index:2;
+}
+
+/* CARD */
+
+.elite-card{
+
+position:relative;
+
+padding:42px 34px;
+
+border-radius:32px;
+
+background:
+rgba(255,255,255,0.05);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(12px);
+
+overflow:hidden;
+
+transition:0.5s;
+
+box-shadow:
+0 10px 35px rgba(0,0,0,0.25);
+}
+
+/* LIGHT EFFECT */
+
+.elite-card::before{
+
+content:'';
+
+position:absolute;
+
+top:-100px;
+right:-100px;
+
+width:220px;
+height:220px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,215,0,0.22),
+transparent 70%
+);
+
+transition:0.6s;
+}
+
+/* HOVER */
+
+.elite-card:hover{
+
+transform:
+translateY(-14px)
+scale(1.03);
+
+border:
+1px solid rgba(255,193,7,0.35);
+
+box-shadow:
+0 20px 45px rgba(255,193,7,0.15);
+}
+
+.elite-card:hover::before{
+
+transform:scale(1.4);
+}
+
+/* ICON */
+
+.elite-icon{
+
+width:90px;
+height:90px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:40px;
+
+border-radius:24px;
+
+margin-bottom:28px;
+
+background:
+linear-gradient(
+135deg,
+#ff9800,
+#ffd54f
+);
+
+box-shadow:
+0 10px 25px rgba(255,193,7,0.35);
+
+animation:floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* CARD TITLE */
+
+.elite-card h3{
+
+font-size:30px;
+
+font-weight:800;
+
+color:white;
+
+margin-bottom:18px;
+
+line-height:1.3;
+}
+
+/* CARD TEXT */
+
+.elite-card p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#d8d8d8;
+}
+
+/* DESKTOP */
+
+@media(min-width:1200px){
+
+.elite-grid{
+
+grid-template-columns:
+repeat(3,1fr);
+}
+
+.elite-card{
+
+min-height:390px;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.elite-section{
+
+padding:80px 15px;
+}
+
+.elite-heading h2{
+
+font-size:40px;
+}
+
+.elite-heading p{
+
+font-size:16px;
+}
+
+.elite-grid{
+
+grid-template-columns:1fr;
+
+gap:24px;
+}
+
+.elite-card{
+
+padding:35px 24px;
+}
+
+.elite-card h3{
+
+font-size:24px;
+}
+
+.elite-card p{
+
+font-size:15px;
+}
+
+  }
 
 
 
@@ -2280,219 +2553,72 @@ We would love to hear from you for retail, wholesale and bulk spice orders.
 
 </div>
 
-<section class="luxury-why-section">
+<section class="elite-section">
 
-<div class="luxury-bg-glow"></div>
+<div class="elite-heading">
 
-<div class="luxury-heading">
-
-<span>
-WHY INDUSTRIES TRUST US
-</span>
+<span>WHY TO CHOOSE US?</span>
 
 <h2>
-Trusted Quality Across Rajasthan
+Trusted By Rajasthan's
+Food Industry
 </h2>
 
 <p>
-Rajput Spices and Rajbhog Spices by Jadaun Masala Udhyog
-are trusted for premium quality spices, hygiene and wholesale supply.
+Premium quality spices manufactured by Jadaun Masala Udhyog
+under Rajput Spices and Rajbhog Spices.
 </p>
 
 </div>
 
-<div class="luxury-grid">
+<div class="elite-grid">
 
-<!-- CARD 1 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🌶️
-</div>
-
+<div class="elite-card">
+<div class="elite-icon">🌶️</div>
 <h3>Premium Spice Quality</h3>
-
 <p>
-Jadaun Masala Udhyog delivers premium quality spices under Rajput Spices and Rajbhog Spices with strong aroma, natural colour and trusted wholesale supply across Rajasthan.
+Jadaun Masala Udhyog delivers premium quality spices with rich aroma, natural colour and trusted wholesale supply across Rajasthan.
 </p>
-
 </div>
 
-<!-- CARD 2 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🏆
-</div>
-
+<div class="elite-card">
+<div class="elite-icon">🏆</div>
 <h3>Trusted Rajput Spices</h3>
-
 <p>
-Rajput Spices by Jadaun Masala Udhyog is one of the most trusted names for turmeric, chilli and coriander powder with hygienic processing and premium export quality standards.
+Rajput Spices is trusted for turmeric, chilli and coriander powder with hygienic processing and premium quality standards.
 </p>
-
 </div>
 
-<!-- CARD 3 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-✨
-</div>
-
+<div class="elite-card">
+<div class="elite-icon">✨</div>
 <h3>Authentic Rajbhog Spices</h3>
-
 <p>
-Rajbhog Spices offers authentic Indian masalas manufactured by Jadaun Masala Udhyog, trusted by halwai associations, restaurants and wholesale traders.
+Rajbhog Spices offers authentic Indian masalas trusted by halwai associations and food businesses.
 </p>
-
 </div>
 
-<!-- CARD 4 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🚚
-</div>
-
-<h3>Wholesale Spice Supply</h3>
-
-<p>
-Premium quality turmeric powder, red chilli powder and coriander powder available from Jadaun Masala Udhyog under Rajput Spices and Rajbhog Spices brands.
-</p>
-
-</div>
-
-<!-- CARD 5 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🧪
-</div>
-
+<div class="elite-card">
+<div class="elite-icon">🧪</div>
 <h3>Lab Tested Purity</h3>
-
 <p>
-Jadaun Masala Udhyog is known for supplying fresh and lab tested spices with consistent quality for wholesalers, retailers and food businesses.
+Fresh and hygienically processed spices manufactured with focus on purity and consistency.
 </p>
-
 </div>
 
-<!-- CARD 6 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🔥
-</div>
-
-<h3>Rich Aroma & Colour</h3>
-
+<div class="elite-card">
+<div class="elite-icon">🚚</div>
+<h3>Wholesale Supply</h3>
 <p>
-Rajput Spices provides strong colour, rich aroma and pure spice blends manufactured using high quality raw materials and hygienic processing methods.
+Trusted bulk spice supplier for wholesalers, hotels, mandis and distributors across Rajasthan.
 </p>
-
 </div>
 
-<!-- CARD 7 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🤝
-</div>
-
-<h3>Trusted Across Rajasthan</h3>
-
+<div class="elite-card">
+<div class="elite-icon">🤝</div>
+<h3>Trusted Business Network</h3>
 <p>
-Rajbhog Spices is becoming a trusted spice brand in Rajasthan for bulk masala supply, hotel use and food industry requirements.
+Recognized by traders, halwai associations and retailers for premium Indian spice quality.
 </p>
-
-</div>
-
-<!-- CARD 8 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-📦
-</div>
-
-<h3>Bulk Supply Network</h3>
-
-<p>
-Trusted by traders, halwai associations and mandi buyers, Jadaun Masala Udhyog manufactures premium Indian spices with competitive wholesale pricing.
-</p>
-
-</div>
-
-<!-- CARD 9 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-⭐
-</div>
-
-<h3>Recognized Spice Brands</h3>
-
-<p>
-Rajput Spices and Rajbhog Spices are recognized for delivering authentic taste, freshness and premium quality spice products across Rajasthan.
-</p>
-
-</div>
-
-<!-- CARD 10 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🏭
-</div>
-
-<h3>Modern Manufacturing</h3>
-
-<p>
-Jadaun Masala Udhyog manufactures high quality masalas for wholesale and retail markets with focus on purity, hygiene and customer satisfaction.
-</p>
-
-</div>
-
-<!-- CARD 11 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🌿
-</div>
-
-<h3>Authentic Indian Taste</h3>
-
-<p>
-Premium Indian spices with natural aroma and rich taste available from Rajput Spices, manufactured by Jadaun Masala Udhyog.
-</p>
-
-</div>
-
-<!-- CARD 12 -->
-
-<div class="luxury-card">
-
-<div class="luxury-icon">
-🥘
-</div>
-
-<h3>Perfect For Food Businesses</h3>
-
-<p>
-Rajbhog Spices offers high quality coriander powder, turmeric powder and chilli powder suitable for restaurants, catering businesses and retailers.
-</p>
-
 </div>
 
 </div>
@@ -2501,6 +2627,15 @@ Rajbhog Spices offers high quality coriander powder, turmeric powder and chilli 
 
 
 
+
+
+
+
+
+
+
+
+  
     
 </section>
 <h2>Our Factory Location</h2>
