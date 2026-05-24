@@ -2019,7 +2019,141 @@ font-size:16px;
 
   }
 
+/* =========================
+EXTRA PREMIUM EFFECT
+========================= */
 
+.why-premium-section,
+.luxury-why-section,
+.why-section{
+
+background:
+linear-gradient(
+135deg,
+#1a0808,
+#2b0d0d,
+#140707
+) !important;
+
+position:relative;
+overflow:hidden;
+}
+
+
+/* GLOW EFFECT */
+
+.why-premium-section::before,
+.luxury-why-section::before,
+.why-section::before{
+
+content:'';
+
+position:absolute;
+
+top:-250px;
+left:-150px;
+
+width:500px;
+height:500px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,140,0,0.18),
+transparent 70%
+);
+
+filter:blur(40px);
+
+animation:moveGlow 8s infinite alternate;
+}
+
+.why-premium-section::after,
+.luxury-why-section::after,
+.why-section::after{
+
+content:'';
+
+position:absolute;
+
+bottom:-250px;
+right:-150px;
+
+width:500px;
+height:500px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,0,80,0.16),
+transparent 70%
+);
+
+filter:blur(40px);
+
+animation:moveGlow2 10s infinite alternate;
+}
+
+
+/* ANIMATION */
+
+@keyframes moveGlow{
+
+0%{
+
+transform:
+translateX(0)
+translateY(0);
+}
+
+100%{
+
+transform:
+translateX(100px)
+translateY(50px);
+}
+
+}
+
+@keyframes moveGlow2{
+
+0%{
+
+transform:
+translateX(0)
+translateY(0);
+}
+
+100%{
+
+transform:
+translateX(-100px)
+translateY(-50px);
+}
+
+}
+
+
+/* HEADING */
+
+.why-top h2,
+.luxury-heading h2,
+.why-heading h2{
+
+font-size:72px !important;
+
+font-weight:900 !important;
+
+line-height:1.1 !important;
+
+background:
+linear-gradient(
+90deg,
+#ffffff,
+#ffb300
+) !important;
+
+-webkit-background-clip
 
 
 
