@@ -1808,7 +1808,166 @@ font-size:24px;
 
      }
   
+/* =========================
+PREMIUM EFFECTS SAFE ADD
+========================= */
 
+/* MOVING BACKGROUND */
+
+.luxury-why-section{
+
+background-size:400% 400%;
+
+animation:bgMove 12s ease infinite;
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* PREMIUM CARD EFFECT */
+
+.luxury-card{
+
+cursor:pointer;
+
+transform-style:preserve-3d;
+
+transition:0.5s;
+}
+
+/* HOVER EFFECT */
+
+.luxury-card:hover{
+
+transform:
+translateY(-15px)
+scale(1.03);
+
+box-shadow:
+0 25px 60px rgba(255,193,7,0.22);
+}
+
+/* GOLD LIGHT */
+
+.luxury-card::after{
+
+content:'';
+
+position:absolute;
+
+top:-120px;
+right:-120px;
+
+width:250px;
+height:250px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,215,0,0.18),
+transparent 70%
+);
+
+transition:0.6s;
+
+pointer-events:none;
+}
+
+.luxury-card:hover::after{
+
+transform:
+scale(1.4);
+
+opacity:1;
+}
+
+/* TITLE GLOW */
+
+.luxury-heading h2{
+
+text-shadow:
+0 0 25px rgba(255,215,0,0.25);
+}
+
+/* ICON EFFECT */
+
+.luxury-icon{
+
+position:relative;
+
+overflow:hidden;
+}
+
+/* SHINE EFFECT */
+
+.luxury-icon::after{
+
+content:'';
+
+position:absolute;
+
+top:-50px;
+left:-80px;
+
+width:220%;
+height:220%;
+
+background:
+linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.45),
+transparent
+);
+
+transform:rotate(25deg);
+
+animation:shineMove 3s linear infinite;
+}
+
+@keyframes shineMove{
+
+0%{
+left:-120%;
+}
+
+100%{
+left:120%;
+}
+
+}
+
+/* DESKTOP MODE */
+
+@media(min-width:1200px){
+
+.luxury-grid{
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:45px;
+}
+
+.luxury-card{
+
+min-height:420px;
+}
+
+  }
 
 
 
