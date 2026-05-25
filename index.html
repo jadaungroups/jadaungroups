@@ -1502,7 +1502,233 @@ padding:24px;
 .association-content h3{
 font-size:2
 
+/* ============================= */
+/* WHY CHOOSE US PREMIUM SECTION */
+/* ============================= */
 
+.why-choose-us{
+    position: relative;
+    padding: 100px 8%;
+    overflow: hidden;
+    background: linear-gradient(135deg,#3b1600,#7a1f00,#c0392b,#f39c12);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    font-family: Arial, sans-serif;
+}
+
+@keyframes bgMove{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* floating spice glow */
+
+.spice-bg::before,
+.spice-bg::after{
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+    animation: floatGlow 8s infinite alternate;
+}
+
+.spice-bg::before{
+    background: #ffcc00;
+    top: -80px;
+    left: -100px;
+}
+
+.spice-bg::after{
+    background: #ff3c00;
+    bottom: -100px;
+    right: -100px;
+}
+
+@keyframes floatGlow{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(40px);
+    }
+}
+
+/* header */
+
+.why-header{
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.why-header .tag{
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeDown 1s ease;
+}
+
+.why-header h2{
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 800;
+    animation: fadeUp 1.2s ease;
+}
+
+.why-header p{
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #f5f5f5;
+    animation: fadeUp 1.4s ease;
+}
+
+/* grid */
+
+.why-grid{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* cards */
+
+.why-card{
+    position: relative;
+    padding: 35px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    transition: 0.5s ease;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.why-card::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to top,
+    rgba(255,204,0,0.25),
+    transparent);
+    transition: 0.5s;
+}
+
+.why-card:hover::before{
+    height: 100%;
+}
+
+.why-card:hover{
+    transform: translateY(-12px) scale(1.03);
+    border-color: #ffd54f;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+}
+
+.icon{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#ffcc00,#ff5e00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    margin-bottom: 22px;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.08);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.why-card h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.why-card p{
+    font-size: 16px;
+    line-height: 1.8;
+    color: #f1f1f1;
+}
+
+/* animations */
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* mobile responsive */
+
+@media(max-width:768px){
+
+    .why-header h2{
+        font-size: 36px;
+    }
+
+    .why-header p{
+        font-size: 16px;
+    }
+
+    .why-card{
+        padding: 28px;
+    }
+
+  }
   
 
 
@@ -1903,180 +2129,105 @@ We would love to hear from you for retail, wholesale and bulk spice orders.
 </div>
 
 
-<!-- =========================
-WHY TO CHOOSE US
-========================= -->
+<!-- WHY TO CHOOSE US SECTION START -->
+<section class="why-choose-us">
 
-<section class="premium-why-section">
+    <div class="spice-bg"></div>
 
-<!-- PARTICLES -->
+    <div class="why-header">
 
-<div class="premium-particles">
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-</div>
+        <span class="tag">
+            JADAUN MASALA UDHYOG | JADAUNGROUPS
+        </span>
 
-<!-- GLOW -->
+        <h2>
+            India’s Trusted Manufacturer Of Premium Spices & Tea
+        </h2>
 
-<div class="premium-glow"></div>
-<div class="premium-glow2"></div>
+        <p>
+            <strong>Jadaun Masala Udhyog | JadaunGroups</strong> is a trusted Indian manufacturer and supplier of premium quality spices and tea products. 
+            Through our popular brands 
+            <strong>Rajbhog Spices</strong>, 
+            <strong>Rajput Spices</strong> 
+            and 
+            <strong>Rajbhog Tea</strong>, 
+            we deliver authentic taste, rich aroma, purity and freshness across India.
+        </p>
 
-<!-- HEADING -->
+    </div>
 
-<div class="premium-heading">
+    <div class="why-grid">
 
-<h5>
-WHY TO CHOOSE US?
-</h5>
+        <!-- CARD 1 -->
+        <div class="why-card">
+            <div class="icon">🌶️</div>
 
-<h2>
-Trusted By Rajasthan's
-Food Industry
-</h2>
+            <h3>Rajbhog Spices</h3>
 
-<p>
-Premium quality spices manufactured by
-<b>Jadaun Masala Udhyog</b>
-under
-<span>Rajput Spices</span>
-and
-<span>Rajbhog Spices</span>.
-Trusted by wholesalers, retailers, halwai associations and food businesses across Rajasthan.
-</p>
+            <p>
+                Premium turmeric powder, red chilli powder, coriander powder and blended masala made with rich flavour, natural colour and traditional Indian taste.
+            </p>
+        </div>
 
-</div>
+        <!-- CARD 2 -->
+        <div class="why-card">
+            <div class="icon">🛡️</div>
 
-<!-- GRID -->
+            <h3>Rajput Spices</h3>
 
-<div class="premium-grid">
+            <p>
+                High quality spice products processed with hygiene, purity and advanced packaging for long-lasting freshness and strong flavour.
+            </p>
+        </div>
 
-<!-- CARD -->
+        <!-- CARD 3 -->
+        <div class="why-card">
+            <div class="icon">🍵</div>
 
-<div class="premium-card">
+            <h3>Rajbhog Tea</h3>
 
-<div class="premium-icon">
-🌶️
-</div>
+            <p>
+                Strong and refreshing tea with rich aroma, natural taste and premium quality tea leaves crafted for Indian tea lovers.
+            </p>
+        </div>
 
-<h3>
-Premium Spice Quality
-</h3>
+        <!-- CARD 4 -->
+        <div class="why-card">
+            <div class="icon">🏭</div>
 
-<p>
-<b>Rajput Spices</b>
-delivers rich aroma, strong colour and premium quality turmeric, chilli and coriander powder with hygienic processing.
-</p>
+            <h3>Jadaun Masala Udhyog</h3>
 
-</div>
+            <p>
+                Trusted manufacturer of Indian spices and tea products focused on quality, customer satisfaction, modern processing and consistent taste.
+            </p>
+        </div>
 
-<!-- CARD -->
+        <!-- CARD 5 -->
+        <div class="why-card">
+            <div class="icon">⭐</div>
 
-<div class="premium-card">
+            <h3>Premium Quality Products</h3>
 
-<div class="premium-icon">
-🏆
-</div>
+            <p>
+                Carefully selected raw materials, hygienic manufacturing and advanced packaging ensure purity, freshness and superior quality in every product.
+            </p>
+        </div>
 
-<h3>
-Trusted Rajbhog Spices
-</h3>
+        <!-- CARD 6 -->
+        <div class="why-card">
+            <div class="icon">🚚</div>
 
-<p>
-<b>Rajbhog Spices</b>
-is trusted by retailers, restaurants and wholesalers for authentic Indian flavour and freshness.
-</p>
+            <h3>Trusted Across India</h3>
 
-</div>
+            <p>
+                JadaunGroups supplies premium spices and tea products to wholesalers, retailers and distributors with reliable delivery and trusted service.
+            </p>
+        </div>
 
-<!-- CARD -->
-
-<div class="premium-card">
-
-<div class="premium-icon">
-🧪
-</div>
-
-<h3>
-Lab Tested Purity
-</h3>
-
-<p>
-Premium spices manufactured by
-<b>Jadaun Masala Udhyog</b>
-with quality assurance and hygienic production standards.
-</p>
-
-</div>
-
-<!-- CARD -->
-
-<div class="premium-card">
-
-<div class="premium-icon">
-🚚
-</div>
-
-<h3>
-Bulk Supply Network
-</h3>
-
-<p>
-Reliable wholesale spice supply across Rajasthan for mandis, distributors, hotels and food businesses.
-</p>
-
-</div>
-
-<!-- CARD -->
-
-<div class="premium-card">
-
-<div class="premium-icon">
-⭐
-</div>
-
-<h3>
-Recognized Spice Brands
-</h3>
-
-<p>
-<b>Rajput Spices</b>
-and
-<b>Rajbhog Spices</b>
-are becoming trusted spice brands across Rajasthan's food industry.
-</p>
-
-</div>
-
-<!-- CARD -->
-
-<div class="premium-card">
-
-<div class="premium-icon">
-✨
-</div>
-
-<h3>
-Authentic Indian Taste
-</h3>
-
-<p>
-Strong aroma, natural colour and authentic Indian flavour loved by halwais, retailers and food businesses.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
-
+<!-- WHY TO CHOOSE US SECTION END -->
 
 
 
